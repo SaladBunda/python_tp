@@ -1,12 +1,11 @@
 import mysql.connector
 
 def connect_to_db():
-    """Establish a connection to the MySQL database."""
     return mysql.connector.connect(
         host="localhost",
         user="user",       
         password="password",  
-        database="SchoolDb"
+        database="universite"
     )
 
 def create_and_populate_table(cursor):
@@ -20,7 +19,6 @@ def create_and_populate_table(cursor):
         );
     """)
 
-    # Insert sample data
     etudiants = [
         ("Alice", 20, 15.5),
         ("Bob", 22, 12.3),
